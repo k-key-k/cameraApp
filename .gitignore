@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Installer folders
+dist/
+build/
+screenshots/
+*.spec
+
+# Virtual environment
+env/
+venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# VSCode and PyCharm project settings
+.vscode/
+.idea/
