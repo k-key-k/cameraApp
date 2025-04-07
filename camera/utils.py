@@ -1,5 +1,6 @@
 import cv2
-from tkinter import filedialog
+from datetime import datetime
+from tkinter import Tk, filedialog
 
 
 def list_cameras(max_devices=5):
@@ -21,3 +22,16 @@ def browse_path(entry_widget):
     if file_path:
         entry_widget.delete(0, "end")
         entry_widget.insert(0, file_path)
+
+
+def get_timestamped_filename(extension="jpg"):
+    now = datetime.now()
+    return now.strftime("%Y-%m-%d_%H-%M-%S") + f".{extension}"
+
+
+def select_folder():
+    root = Tk()
+    root.withdraw()
+    folder = filedialog.askdirectory(title="Выберите папку для сохранения изображений")
+    root.destroy()
+    return folder
